@@ -87,7 +87,7 @@ const eventEmitters = {
         debug("dispatching success, we have a token");
         dispatch("success", { msg: "ok", token: token });
 
-        setTimeout(() => recaptcha.reset(instanceId), 1000);
+        setTimeout(() => recaptcha.reset(instanceId), 45 * 1000);
         debug("resetting, google needs allowed time if visible recaptcha..");
 
         observer = defer();
